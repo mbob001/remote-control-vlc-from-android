@@ -1,0 +1,24 @@
+name: remote_control_service      # Důležitý název, Conda jej použije pro prostředí
+channels:
+  - conda-forge            # Doporučený kanál pro aktuální balíčky a kompatibilitu
+  - defaults               # Základní kanál Condy
+  # - ... další kanály, např. nvidia, pokud používáte GPU
+
+dependencies:
+  # 1. Verze Pythonu: Zde je klíčová verze
+  - python=3.11            # Zvolte konkrétní verzi, kterou projekt vyžaduje
+
+  # 2. Hlavní balíčky (budou instalovány Condou)
+  - pip                    # Nutné, pokud používáte i balíčky z PyPI (pip)
+  - numpy
+  - pandas
+  #- scikit-learn
+  #- flask                  # Příklad webového frameworku
+  #- requests
+  #- pytest                 # Příklad testovacího nástroje
+
+  # 3. Balíčky instalované přes pip (pokud nejsou dostupné přes Conda)
+  #- pip:
+  #    - beautifulsoup4      # Příklad balíčku pouze z PyPI
+  #    - python-vlc          # Předpokládáme, že toto je váš VLC balíček
+  #    - pydantic==2.5.3     # Můžete specifikovat přesnou verzi balíčku z PyPI
